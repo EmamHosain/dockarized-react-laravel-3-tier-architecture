@@ -6,7 +6,7 @@ WORKDIR /var/www/html
 RUN rm -rf /etc/nginx/conf.d/default.conf
 
 # Copy your custom config
-COPY ./docker/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/nginx/local.conf /etc/nginx/conf.d/default.conf
 
 # Set permissions (optional safety)
 RUN chmod -R 755 /var/www/html
